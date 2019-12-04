@@ -7,7 +7,11 @@ namespace Calculator
     {
         public List<int> GetFactorials(List<int> numbers)
         {
-            for(var i = 0; i < numbers.C)
+            for(var i = 0; i < numbers.Count; i++)
+            {
+                numbers[i] = CountFactorial(numbers[i]);
+            }
+            return numbers;
         }
 
         private int CountFactorial(int number)
