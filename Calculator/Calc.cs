@@ -5,7 +5,7 @@ namespace Calculator
 {
     public class Calc
     {
-        public List<int> GetFactorials(List<int> numbers)
+        public List<long> GetFactorials(List<long> numbers)
         {
             for(var i = 0; i < numbers.Count; i++)
             {
@@ -14,8 +14,9 @@ namespace Calculator
             return numbers;
         }
 
-        private int CountFactorial(int number)
+        private long CountFactorial(long number)
         {
+            if (number == 0) return 1;
             var index = number;
             while (index > 1)
             {
